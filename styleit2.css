@@ -10,8 +10,9 @@ body{
     text-align: center;
     padding-top: 10px ;
 }
-svg{
-    width: 30px;
+svg {
+    width: 40px; /* Increased size */
+    height: 40px; /* Ensure height is also set */
 }
 header{
     display: flex;
@@ -27,7 +28,7 @@ header .icon-cart{
 
 header .icon-cart span {
     display: block;
-    width: 30px;
+    width: 20px;
     height: 30px;
     background-color: red;
     justify-content: center;
@@ -36,5 +37,40 @@ header .icon-cart span {
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -10px;
+}
+
+
+
+/*Product*/
+.list-product .item img{
+    width: 90%;
+    filter: drop-shadow(0 10px 20px black);
+}
+.list-product{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.list-product .item{
+    background-color: rgb(202, 190, 173);
+    padding: 20px;
+    border-radius: 20px;
+}
+.list-product .item h2{
+    font-size: large;
+    font-weight: 700;
+}
+.list-product .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.list-product .item button{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20%;
+    margin-top: 10px;
+    border: none ;
+    cursor: pointer;
 }
