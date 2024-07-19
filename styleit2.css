@@ -57,20 +57,56 @@ header .icon-cart span {
     padding: 20px;
     border-radius: 20px;
 }
-.list-product .item h2{
+.list-product .item h2 {
     font-size: large;
     font-weight: 700;
+    text-align: center;
 }
+
 .list-product .item .price{
     letter-spacing: 7px;
     font-size: small;
+    text-align: center;
 }
-.list-product .item button{
-    background-color: black;
+.list-product .item button {
+    background-color: rgb(33, 15, 9);
     color: #fff;
     padding: 5px 10px;
     border-radius: 20%;
-    margin-top: 10px;
-    border: none ;
+    margin: 10px auto 0;
+    border: none;
     cursor: pointer;
+    display: block;
+}
+.cartTab {
+    width: 400px;
+    background-color: rgb(51, 7, 7);
+    color: white;
+    position: fixed;
+    inset: 0 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;  
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+    background-color: blanchedalmond;
+    border: none;
+    font-family: 'Playwrite HR Lijeva', sans-serif; /* Ensure the font is properly referenced */
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .btn .close {
+    background-color: rgb(173, 160, 160); /* Corrected property */
 }
