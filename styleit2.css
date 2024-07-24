@@ -4,8 +4,8 @@ body{
     margin: 0; 
 }
 .container{
-    width: 1280px;
-    max-width: 90%;
+    width: 900px;
+    max-width: 90vw;
     margin: auto;
     text-align: center;
     padding-top: 10px ;
@@ -28,7 +28,7 @@ header .icon-cart{
 }
 
 header .icon-cart span {
-    display: block;
+    display: flex;
     width: 20px;
     height: 30px;
     background-color: red;
@@ -44,32 +44,32 @@ header .icon-cart span {
 
 
 /*Product*/
-.list-product .item img{
+.listProduct .item img{
     width: 90%;
     filter: drop-shadow(0 10px 20px black);
 }
-.list-product{
+.listProduct{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.list-product .item{
+.listProduct .item{
     background-color: rgb(202, 190, 173);
     padding: 20px;
     border-radius: 20px;
 }
-.list-product .item h2 {
+.listProduct .item h2 {
     font-size: large;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
 }
 
-.list-product .item .price{
+.listProduct .item .price{
     letter-spacing: 7px;
     font-size: small;
-    text-align: center;
+    /*text-align: center;*/
 }
-.list-product .item button {
+.listProduct .item button {
     background-color: rgb(33, 15, 9);
     color: #fff;
     padding: 5px 10px;
@@ -92,9 +92,10 @@ header .icon-cart span {
 
 body.showCart .cartTab {
     inset: 0 0 0 auto;
+}
+body .showCart .container{
     transform: translateX(-250px);
 }
-
 .cartTab h1 {
     padding: 20px;
     margin: 0;
