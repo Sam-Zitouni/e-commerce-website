@@ -2,7 +2,11 @@ let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct'); // Corrected the class selector
+
+
 let listProducts = [];
+/*see part 4*/
+let carts =[];
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -35,9 +39,17 @@ listProductHTML.addEventListener('click', (event) => {
     const positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
         const productId = positionClick.parentElement.dataset.id;
-        alert(productId);
+        /* 3. alert(productId);  houni alert bech tchouf code ye5dim a illa le si ye5dem t3ada badel alert b add to caet w asna3 function lbarra ismha add to cart*/
+        addToCart(productId);
     }
 });
+
+/*4*/
+const addToCart = (product_id)=>{
+
+}
+
+
 
 const initApp = () => {
     // Get data from JSON
