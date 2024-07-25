@@ -2,11 +2,11 @@ let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct'); // Corrected the class selector
+let listCartHTML = document.querySelector('.listCart');
 
-
+let iconCartSpan = document.querySelector('.icon-cart span');
 let listProducts = [];
-/*see part 4*/
-let carts =[];
+let carts = [];
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -16,7 +16,7 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-/*2*/
+/* Function to add products to the HTML */
 const addToHTML = () => {
     listProductHTML.innerHTML = '';
     if (listProducts.length > 0) {
@@ -25,7 +25,7 @@ const addToHTML = () => {
             newProduct.classList.add('item');
             newProduct.dataset.id = product.id;  
             newProduct.innerHTML = `
-                <img src="pics/chair.png" alt="${product.name}">
+                <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
                 <div class="price">$${product.price}</div>
                 <button class="addCart">Add to cart</button>
@@ -35,30 +35,58 @@ const addToHTML = () => {
     }
 };
 
+/* Event listener for adding products to the cart */
 listProductHTML.addEventListener('click', (event) => {
     const positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
         const productId = positionClick.parentElement.dataset.id;
-        /* 3. alert(productId);  houni alert bech tchouf code ye5dim a illa le si ye5dem t3ada badel alert b add to caet w asna3 function lbarra ismha add to cart*/
         addToCart(productId);
     }
 });
 
-/*4*/
-const addToCart = (product_id)=>{
+/* Function to add products to the cart */
+const addToCart = (product_id) => {
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+    if (positionThisProductInCart < 0) {
+        carts.push({
+            product_id: product_id,
+            quantity: 1
+        });
+    } else {
+        carts[positionThisProductInCart].quantity += 1;
+    }
+    updateCartHTML();
+    console.log(carts); /* For debugging purposes */
+};
 
-}
+/* Function to update the cart HTML */
+const updateCartHTML = () => {
+    listCartHTML.innerHTML = '';
+    if (carts.length > 0) {
+        carts.forEach(cartItem => {
+            let product = listProducts.find(product => product.id == cartItem.product_id);
+            let newCartItem = document.createElement('div');
+            newCartItem.classList.add('cart-item');
+            newCartItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <div class="quantity">Quantity: ${cartItem.quantity}</div>
+            `;
+            listCartHTML.appendChild(newCartItem);
+        });
+        iconCartSpan.textContent = carts.length;
+    }
+};
 
-
-
+/* Initialize the app */
 const initApp = () => {
     // Get data from JSON
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
             listProducts = data;
-            /*console.log(listProducts); // to see if all the data is logged in*/
-            addToHTML(); /*1*/
+            addToHTML();
         })
         .catch(error => console.error('Error fetching the products:', error));
 };

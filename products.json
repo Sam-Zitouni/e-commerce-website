@@ -3,11 +3,11 @@
         "id":1,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/1.png"
+        "image":"pics/chair.png"
     },
     {
         "id":2,
-        "name":"ldb1 longue chair",
+        "name":"smile",
         "price":200,
         "image":"pics/1.png"
     },
