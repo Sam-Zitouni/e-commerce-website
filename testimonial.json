@@ -1,0 +1,26 @@
+{
+    "testimonials": [
+      {
+        "text": "I am in love with this vintage-style dress. It is unique and fits perfectly. I have received so many compliments!",
+        "rating": 5,
+        "image": "pics/violet_garden.jpg",
+        "name": "Violet Garden",
+        "comments": []
+      },
+      {
+        "text": "I am in love with this vintage-style dress. It is unique and fits perfectly. I have received so many compliments!",
+        "rating": 5,
+        "image": "pics/lady_diana.jpg",
+        "name": "Lady Diana",
+        "comments": []
+      },
+      {
+        "text": "I am in love with this vintage-style dress. It is unique and fits perfectly. I have received so many compliments!",
+        "rating": 5,
+        "image": "pics/pierre_monalisa.jpg",
+        "name": "Pierre Monalisa",
+        "comments": []
+      }
+    ]
+  }
+  
