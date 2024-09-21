@@ -3,41 +3,51 @@
         "id":1,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/chair.png"
+        "image":"pics/chair.png",
+        "category":"Accessories"
+        
     },
     {
         "id":2,
         "name":"smile",
         "price":200,
-        "image":"pics/3.jpg"
+        "image":"pics/3.jpg",
+         "category":"clothing"
     },
     {
         "id":3,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/4.jpg"
+        "image":"pics/4.jpg",
+        "category":"clothing"
     },    {
         "id":4,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/1.png"
+        "image":"pics/1.png",
+        "category":"clothing"
     },
     {
         "id":5,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/1.png"
+        "image":"pics/1.png",
+        "category":"clothing"
     },
     {
         "id":6,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/1.png"
+        "image":"pics/1.png",
+        "category":"Clothing"
     },
     {
         "id":7,
         "name":"ldb1 longue chair",
         "price":200,
-        "image":"pics/1.png"
+        "image":"pics/1.png",
+        "category":"clothing"
     }
+
+    
 ]

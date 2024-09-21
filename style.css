@@ -616,6 +616,10 @@ form a{
   justify-content: center;
   align-items: center;
 }
+#product-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 
 
