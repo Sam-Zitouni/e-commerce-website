@@ -1,32 +1,49 @@
-  // Import the functions you need from the SDKs you need
+
+  // Import the Firebase SDKs
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+  
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+  } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+// Ensure DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
 
-
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyCTIN86z2fozLxmuCULHt7_zReKUGDahiw",
-    authDomain: "login-example-d6aa0.firebaseapp.com",
-    projectId: "login-example-d6aa0",
-    storageBucket: "login-example-d6aa0.appspot.com",
-    messagingSenderId: "547919643919",
-    appId: "1:547919643919:web:05fed007ab510d67956a7a"
+    apiKey: "AIzaSyCK56hoZbIWegeCb3IK0AidyeddxrF0S3U",
+    authDomain: "login-87119.firebaseapp.com",
+    projectId: "login-87119",
+    storageBucket: "login-87119.appspot.com",
+    messagingSenderId: "1008946722900",
+    appId: "1:1008946722900:web:df77bea881039240ab15c1",
   };
 
   // Initialize Firebase
-  const app = initisalizeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
 
+  // Register form handling
+  const registerForm = document.getElementById("RegForm");
+  const registerBtn = document.getElementById("submit");
 
-  //inputs
-  const email= document.getElementById('email').value;
-  const username=document.getElementById('username').value;
-  const password=document.getElementById('password').value; 
-  const submit=document.getElementById('submit');
-  
-  submit.addEventListener("click",function(event){
-    event.preventDefault()
-    alert(5)
-  })
+  registerBtn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent page refresh
+
+    const email = document.getElementById("register-email").value;
+    const password = document.getElementById("register-password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // User account created
+        const user = userCredential.user;
+        alert("Account created successfully!");
+        window.location.href = "grand.html"; // Redirect after successful registration
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        alert(errorMessage); // Show error message
+      });
+  });
+});
