@@ -4,56 +4,114 @@
         "image": "pics/2.jpg",
         "title": "summer standard set 1",
         "rating": 4,
-        "price": "$250.000"
+        "price": "250.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Accessories",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
+
     },
     {
         "id": 2,
         "image": "pics/4.jpg",
         "title": "summer standard set 2",
         "rating": 4,
-        "price": "$300.000"
+        "price": "300.000",
+        "popularity": 100,
+        "sale": 20,
+        "category":"Footwear",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     },
     {
         "id": 3,
         "image": "pics/5.jpg",
         "title": "summer standard set 3",
         "rating": 5,
-        "price": "$450.000"
+        "price": "450.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Accessories",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     },
     {
         "id": 4,
         "image": "pics/3.jpg",
         "title": "summer standard set 4",
         "rating": 3,
-        "price": "$150.000"
+        "price": "150.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Accessories",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     },
     {
         "id": 5,
         "image": "pics/3.jpg",
         "title": "summer standard set 4",
         "rating": 3,
-        "price": "$150.000"
+        "price": "150.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Accessories",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     },
     {
         "id": 6,
         "image": "pics/3.jpg",
         "title": "summer standard set 4",
         "rating": 3,
-        "price": "$150.000"
+        "price": "150.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Accessories",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     },
     {
         "id": 7,
         "image": "pics/3.jpg",
         "title": "summer standard set 4",
         "rating": 3,
-        "price": "$150.000"
+        "price": "150.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Clothing",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
+        
     },
     {
         "id": 8,
         "image": "pics/3.jpg",
         "title": "summer standard set 4",
         "rating": 3,
-        "price": "$150.000"
+        "price": "150.000",
+        "popularity": 100,
+        "sale": 20,
+        "category": "Clothing",
+        "description":"divine art by almost godly beings",
+        "picture2":"pics/2.jpg",
+        "picture3":"pics/2.jpg",
+        "picture4":"pics/2.jpg"
     }
     
 ]

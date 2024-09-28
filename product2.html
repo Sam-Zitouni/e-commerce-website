@@ -1,93 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Products - Lady's Choice</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="pics/LOGO11.png" type="image/x-icon"> 
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="icon" href="pics/LOGO11.png" type="image/x-icon" />
+  </head>
+  <body>
     <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <a href="lay.html">
-                    <img src="LADY BOUTIQUE1.png" width="150px" alt="Lady Boutique Logo">
-                </a>
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="lay.html">Home</a></li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="login.html">Account</a></li>
-                </ul>
-            </nav>
-            <a href="cartshop.html">
-                <img src="cart.png" width="30px" height="30px">
-            </a>
-            <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+      <div class="navbar">
+        <div class="logo">
+          <a href="lay.html">
+            <img
+              src="LADY BOUTIQUE1.png"
+              width="150px"
+              alt="Lady Boutique Logo"
+            />
+          </a>
         </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="lay.html">Home</a></li>
+            <li><a href="product2.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cartshop.html">
+          <img src="cart.png" width="30px" height="30px" />
+        </a>
+        <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
     </div>
 
     <div class="small-container">
-        <div class="row row-2" id="sortSelect">
-            <h2>All Products</h2>
-            <select>
-                <option>Default Sorting</option>
-                <option>Sort by price</option>
-                <option>Sort by popularity</option>
-                <option>Sort by rating</option>
-                <option>Sort by sale</option>
-            </select>
-        </div>
-        <div id="product-container" class="row"></div>
+      <div class="row row-2" id="sortSelect">
+        <h2>All Products</h2>
+        <select id="sort-options">
+          <option value="default">Default Sorting</option>
+          <option value="price">Sort by price</option>
+          <option value="popularity">Sort by popularity</option>
+          <option value="rating">Sort by rating</option>
+          <option value="sale">Sort by sale</option>
+        </select>
+      </div>
+      <div id="product-container" class="row"></div>
     </div>
 
     <script>
-        // Function to generate star ratings
-        function generateStars(rating) {
-            let starsHtml = '';
-            for (let i = 5; i >= 1; i--) {
-                starsHtml += `
-                    <input type="radio" id="star${i}" name="rating" value="${i}" ${i === rating ? 'checked' : ''}>
-                    <label for="star${i}" title="${i} stars">☆</label>
-                `;
-            }
-            return starsHtml;
+      let products = []; // Store the products globally
+
+      // Function to generate static star ratings based on the rating value
+      function generateStars(rating) {
+        let starsHtml = "";
+        for (let i = 5; i >= 1; i--) {
+          starsHtml +=
+            i <= rating
+              ? '<i class="fa fa-star"></i>'
+              : '<i class="fa fa-star-o"></i>';
         }
+        return starsHtml;
+      }
 
-        // Function to fetch and render products
-        async function fetchAndRenderProducts() {
-            try {
-                const response = await fetch('element.json');
-                const products = await response.json();
-                const container = document.getElementById('product-container');
+      // Function to fetch products
+      async function fetchProducts() {
+        try {
+          const response = await fetch("element.json");
+          if (!response.ok) throw new Error("Network response was not ok");
+          products = await response.json();
+          renderProducts(products); // Render the products initially
+        } catch (error) {
+          console.error("Error fetching products:", error);
+        }
+      }
 
-                products.forEach(product => {
-                    container.innerHTML += `
-                        <div class="col-4">
-                            <img src="${product.image}" class="uniform-size" alt="${product.title}">
-                            <h4>${product.title}</h4>
-                            <div class="star-rating">
-                                ${generateStars(product.rating)}
-                            </div>
-                            <p>${product.price}</p>
+      // Function to render products
+      function renderProducts(productsToRender) {
+        const container = document.getElementById("product-container");
+        container.innerHTML = ""; // Clear the container before rendering
+        productsToRender.forEach((product) => {
+          container.innerHTML += `
+                    <div class="col-4">
+                        <img src="${product.image}" class="uniform-size" alt="${
+            product.title
+          }">
+                        <h4>${product.title}</h4>
+                        <div class="star-rating">
+                            ${generateStars(product.rating)}
                         </div>
-                    `;
-                });
-            } catch (error) {
-                console.error('Error fetching products:', error);
-            }
+                        <p>${product.price}</p>
+                        <a href="productsdetails2.html?id=${
+                          product.id
+                        }" class="btn">Details</a>
+                    </div>
+                `;
+        });
+      }
+
+      // **Corrected Sorting Logic** (Added default values for undefined fields)
+      function sortProducts(option) {
+        let sortedProducts = [...products]; // Copy products array for sorting
+
+        if (option === "price") {
+          sortedProducts.sort((a, b) => a.price - b.price); // Sort by price (ascending)
+        } else if (option === "popularity") {
+          sortedProducts.sort(
+            (a, b) => (b.popularity || 0) - (a.popularity || 0)
+          ); // **Handle undefined popularity**
+        } else if (option === "rating") {
+          sortedProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0)); // **Handle undefined rating**
+        } else if (option === "sale") {
+          sortedProducts.sort((a, b) => (b.sale || 0) - (a.sale || 0)); // **Handle undefined sale**
         }
 
-        // Call the function to fetch and render products
-        fetchAndRenderProducts();
-        /*sorting products*/
+        console.log("Sorted Products:", sortedProducts); // **Debugging: Log sorted products**
+        renderProducts(sortedProducts);
+      }
+
+      // Event listener for sorting dropdown
+      document
+        .getElementById("sort-options")
+        .addEventListener("change", (event) => {
+          const selectedOption = event.target.value;
+          if (selectedOption === "default") {
+            renderProducts(products); // Render the original unsorted products
+          } else {
+            sortProducts(selectedOption);
+          }
+        });
+
+      // Call the function to fetch products
+      fetchProducts();
     </script>
-</body>
+  </body>
 </html>

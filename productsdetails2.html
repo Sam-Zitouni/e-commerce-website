@@ -1,196 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products-Lady's Choice</title>
+    <title>Product Details - Lady's Choice</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="pics/LOGO11.png" type="image/x-icon"> 
- </head>
- <body>
+</head>
+<body>
 
-
-  <div class="container">
-    <div class="navbar">
-      <div class="logo">
-       <a href="lay.html">
-        <img src="LADY BOUTIQUE1.png" width="150px" alt="Lady Boutique Logo">
-       </a>
-      </div>
-     <nav>
-        <ul id="MenuItems">
-            <li><a href="lay.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="login.html">Account</a></li>
-        </ul>
-     </nav>
-     <a href="cartshop.html">
-     <img src="cart.png" width="30px" height="30px">
-    </a>
-     <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+    <!-- Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="lay.html">
+                    <img src="LADY BOUTIQUE1.png" width="150px" alt="Lady Boutique Logo">
+                </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="lay.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cartshop.html">
+                <img src="cart.png" width="30px" height="30px">
+            </a>
+            <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
     </div>
-</div>
 
-
-
-    <!---single product details-->
-
+    <!-- Single Product Details -->
     <div class="small-container single-product">
-      <div class="row">
-        <div class="col-2">
-          <img src="pics/2.jpg" width="100%" id="ProductIm" class="resized-img">
-        
-          <div class="small-img-row">
-            <div class="small-img-col">
-              <img src="pics/2.jpg" class="small-img">
+        <div class="row">
+            <div class="col-2">
+                <img src="pics/placeholder.jpg" width="100%" id="ProductIm" class="resized-img">
+                
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="pics/placeholder.jpg" class="small-img" id="smallImg1">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="pics/placeholder.jpg" class="small-img" id="smallImg2">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="pics/placeholder.jpg" class="small-img" id="smallImg3">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="pics/placeholder.jpg" class="small-img" id="smallImg4">
+                    </div>
+                </div>
             </div>
-            <div class="small-img-col">
-              <img src="pics/1.jpg" class="small-img">
-            </div>
-            <div class="small-img-col">
-              <img src="pics/3.jpg" class="small-img">
-            </div>
-            <div class="small-img-col">
-              <img src="pics/2.jpg" class="small-img">
-            </div>
-          </div>
-        </div>
-        
 
-        <div class="col-2">
-          <p>Home/Full set</p>
-          <h1>summer standard set 1 by korean prand</h1>
-          <h4>$250.000</h4>
+            <div class="col-2">
+                <p id="breadcrumb">Home / Category</p>
+                <h1 id="productTitle">Product Title</h1>
+                <h4 id="productPrice">$0.00</h4>
 
-          <select>
-            <option>Select Size</option>
-            <option>XXL</option>
-            <option>XL</option>
-            <option>L</option>
-            <option>Large</option>
-            <option>Medium</option>
-            <option>Small</option>
-          </select>
-          <input type="number" value="1">
-          <a href="" class="btn">Add to Cart</a>   
-          <h3>Product details <i class="fa fa-bars"></i>
-          </h3>
-          <br>
-          <p>Size color dreamy and dress is peachy have fun in this world mounthing design</p>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add to Cart</a>
+                
+                <h3>Product Details <i class="fa fa-bars"></i></h3>
+                <br>
+                <p id="productDescription">Product details will go here.</p>
+            </div>
         </div>
-      </div>
     </div>
 
-
-
-<!--title-->
-<div class="small-container">
-  <div class="row row-2">
-    <h2>Related Products</h2>
-  
-    <label for="category">Select Category:</label>
-    <select id="category" onchange="filterProducts()">
-        <option value="">--Select--</option>
-        <option value="Clothing">Clothing</option>
-        <option value="Accessories">Accessories</option>
-        <option value="Footwear">Footwear</option>
-    </select>
-
-    <div id="product-list"></div>
-  </div>
-
-</div>
-
-
-
-
-<script src="script3.js"></script>
-
-
-
-
-
-
-<!---footer-->
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="footer-col-1">
-        <h3>download our app</h3>
-        <p>Load App for Android and IPhone</p>
-        <div class="app-logo">
-          <img src="pics/start.png" >
-          <img src="pics/start2.png">
+    <!-- Related Products -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <label for="category">Select Category:</label>
+            <select id="category" onchange="filterRelatedProducts()">
+                <option value="">--All--</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Footwear">Footwear</option>
+            </select>
+            <div id="related-products" class="row"></div>
         </div>
-      </div>
-      <div class="footer-col-2">
-        <img src="LADY BOUTIQUE1.png" width="100px" alt="Lady Boutique Logo">
-        <p>Our Purpose is to sustainbly make the pleasure
-        and benefits of Lady's diverse choice accessible to many.
-        </p>
-      </div>
-      <div class="footer-col-3">
-        <h3>Useful Links</h3>
-        <ul> 
-          <li>coupons</li>
-          <li>Blog Post</li>
-          <li>Return Policy</li>
-          <li>Join Affiliates</li>
-        </ul>
-      </div>
-      <div class="footer-col-4">
-        <h3>Follow us</h3>
-        <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Twitter</li>
-          <li>Youtube</li>
-        </ul>
-      </div>
     </div>
-    <hr>
-    <div class="copyright">
-      <p>copyright 2024-Easy Tutoials</p>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Load App for Android and iPhone</p>
+                    <div class="app-logo">
+                        <img src="pics/start.png">
+                        <img src="pics/start2.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="LADY BOUTIQUE1.png" width="100px" alt="Lady Boutique Logo">
+                    <p>Our purpose is to sustainably make the pleasure and benefits of Lady's diverse choice accessible to many.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!---js for togglemenu-->
-<script>
-  var MenuItems= document.getElementById("MenuItems");
-  MenuItems.style.maxHeight="0px";
-  function menutoggle() {
-    
-      if (MenuItems.style.maxHeight == "0px") {
-          MenuItems.style.maxHeight = "200px";
-      } else {
-          MenuItems.style.maxHeight = "0px";
-      }
-  }
-  </script>
+    <!-- JavaScript to Fetch Product Details and Related Products -->
+    <script>
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        let products = [];
 
+        // Fetch the JSON data
+        fetch('element.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
 
+                // Display the main product details
+                const product = products.find(p => p.id == productId);
+                if (product) {
+                    displayProductDetails(product);
+                    displayRelatedProducts(product.category);
+                }
+            })
+            .catch(error => console.error('Error loading product details:', error));
 
-<!---js for poduct gallery -->
+        // Function to display product details
+        function displayProductDetails(product) {
+            document.getElementById('ProductIm').src = product.image;
+            document.getElementById('smallImg1').src = product.image;
+            document.getElementById('smallImg2').src = product.picture2;
+            document.getElementById('smallImg3').src = product.picture3;
+            document.getElementById('smallImg4').src = product.picture4;
 
-<script>
-  var ProductIm = document.getElementById("ProductIm");
-  var SmallIm = document.getElementsByClassName("small-img"); 
+            document.getElementById('productTitle').innerText = product.title;
+            document.getElementById('productPrice').innerText = '$' + product.price;
+            document.getElementById('productDescription').innerText = product.description;
+            document.getElementById('breadcrumb').innerText = 'Home / ' + product.category;
 
-  for (var i = 0; i < SmallIm.length; i++) {
-    SmallIm[i].onclick = function() {
-      ProductIm.src = this.src;
-    }
-  }
-</script>
+            // Set up gallery image switcher
+            const smallImgs = document.getElementsByClassName('small-img');
+            for (let i = 0; i < smallImgs.length; i++) {
+                smallImgs[i].addEventListener('click', function() {
+                    document.getElementById('ProductIm').src = this.src;
+                });
+            }
+        }
 
+        // Function to display related products
+        function displayRelatedProducts(category = "") {
+            let filteredProducts = products;
 
+            // Filter by category if selected
+            if (category) {
+                filteredProducts = products.filter(p => p.category === category);
+            }
 
+            // Sort by rating and pick top 4
+            const topRatedProducts = filteredProducts.sort((a, b) => b.rating - a.rating).slice(0, 4);
 
- </body>
+            const relatedProductsContainer = document.getElementById('related-products');
+            relatedProductsContainer.innerHTML = '';
+
+            topRatedProducts.forEach(product => {
+                relatedProductsContainer.innerHTML += `
+                    <div class="col-4">
+                        <img src="${product.image}" class="uniform-size" alt="${product.title}">
+                        <h4>${product.title}</h4>
+                        <div class="star-rating">
+                            ${generateStars(product.rating)}
+                        </div>
+                        <p>$${product.price}</p>
+                        <a href="productdetails2.html?id=${product.id}" class="btn">Details</a>
+                    </div>
+                `;
+            });
+        }
+
+        // Function to filter related products when category is selected
+        function filterRelatedProducts() {
+            const selectedCategory = document.getElementById('category').value;
+            displayRelatedProducts(selectedCategory);
+        }
+
+        // Function to generate star ratings (based on rating value)
+        function generateStars(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fa fa-star"></i>';
+                } else {
+                    stars += '<i class="fa fa-star-o"></i>';
+                }
+            }
+            return stars;
+        }
+    </script>
+
+</body>
 </html>

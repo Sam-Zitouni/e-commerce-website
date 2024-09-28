@@ -130,39 +130,16 @@ p{
 
 /*<!-----------star-rating--------->*/
 .star-rating {
-  direction: rtl;
-  display: flex;
-  justify-content: center;
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center the stars horizontally */
+  margin: 10px 0; /* Add some spacing around the stars */
 }
 
-.star-rating input {
-  display: none;
+.star-rating i {
+  color: pink; /* Set the color of the stars to pink */
+  font-size: 20px; /* Set the size of the stars */
+  margin: 0 2px; /* Add some space between the stars */
 }
-
-.star-rating label {
-  font-size: 2em;
-  color: #ddd;
-  cursor: pointer;
-  padding: 0 5px;
-  transition: color 0.2s;
-}
-
-.star-rating input:checked ~ label {
-  color: #34e5ec;
-}
-
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  color: #34e5ec;
-}
-
-.star-rating input:checked + label:hover,
-.star-rating input:checked + label:hover ~ label,
-.star-rating input:checked ~ label:hover,
-.star-rating input:checked ~ label:hover ~ label {
-  color: #34e5ec;
-}
-
 
 
 /*title in the middle*/
