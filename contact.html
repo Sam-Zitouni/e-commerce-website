@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lady's Choice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contactcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="lay.html">
+                    <img src="LADY BOUTIQUE1.png" width="150px" alt="Lady Boutique Logo">
+                </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="lay.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cartshop.html">
+                <img src="cart.png" width="30px" height="30px">
+            </a>
+            <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Email: support@ladyschoice.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Fashion St, Tunis, Tunisia</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Load App for Android and iPhone</p>
+                    <div class="app-logo">
+                        <img src="pics/start.png">
+                        <img src="pics/start2.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="LADY BOUTIQUE1.png" width="100px" alt="Lady Boutique Logo">
+                    <p>Our purpose is to sustainably make the pleasure and benefits of Lady's diverse choice accessible to many.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
